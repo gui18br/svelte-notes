@@ -23,8 +23,10 @@
     <button type="submit">Criar</button>
 </form>
 
-{#each storedNotes as note (note.id)}
-    <div class="note" id={note.id}>
-        {note.content}
-    </div>
+{#each storedNotes as note(note.id)}
+    <a href={`/${note.id}`}>
+        <div class="note" id={note.id}>
+            {note.content}
+        </div>
+    </a>
 {/each}
